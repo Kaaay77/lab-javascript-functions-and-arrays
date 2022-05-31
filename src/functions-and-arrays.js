@@ -32,7 +32,7 @@ function findLongestWord(palabra) {
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(arr) {
-  if(arr.length === 0 ) return null;
+  if(!arr.length ) return 0;
   let resultado = 0;
   for(let i = 0; i < arr.length; i++){
     resultado += arr[i] 
@@ -43,7 +43,9 @@ function sumNumbers(arr) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arr) {
+ if(!arr.length) return 0;
+}
 
 
 
@@ -52,7 +54,7 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arr) {
-  if(arrl.ength === 0) return null;
+  if(!arr.length) return null;
 
   let resultado1 = 0;
   let resultado2 = 0;
@@ -61,7 +63,7 @@ function averageNumbers(arr) {
     resultado1 += arr[i]
     resultado2 = resultado1 / arr.length
   }
-  console.log(resultado2);
+  return resultado2;
 }
 
 
@@ -69,7 +71,7 @@ function averageNumbers(arr) {
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(arr) { 
-  if(arrl.ength === 0) return null;
+  if(!arr.length) return null;
     let totalLetters = 0;
     let totalIndex = 0;
     let average = 0;
@@ -106,7 +108,10 @@ function uniquifyArray() {}
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arr) {
+  let palabra = ''
+
+}
 
 
 
