@@ -46,13 +46,13 @@ function sum(arr) {
   let sum = 0;
 
   for(let i = 0; i < arr.length; i++){
-    if(tipeof arr[i] === 'number'){
-      sum += arr[i];
-    }else if (tipeof arr[i] === 'string'){
-      sum += arr[i].length;
-    }else if (tipeof arr[i] === 'boolean'){
-      sum += arr[i];
-    }else {
+      if(typeof arr[i] === 'Number'){
+        sum += arr[i];
+      }else if (typeof arr[i] === 'string'){
+        sum += arr[i].length;
+      }else if (typeof arr[i] === 'boolean'){
+        sum += arr[i];
+      }else{
       throw new Error("Unsupported data type sir or ma'am");
     // MIRANDO LAS SOLUCIONES
   }
@@ -105,11 +105,11 @@ function avg(arr) {
   }
 
   for(let i = 0; i < arr.length; i++){
-    if(tipeof arr[i] === 'number'){
+    if(typeof arr[i] === 'number'){
       total += arr[i];
-    }else if(tipeof arr[i] === 'string'){
+    }else if(typeof arr[i] === 'string'){
       total += arr[i].length;
-    }else if(tipeof arr[i] === 'boolean'){
+    }else if(typeof arr[i] === 'boolean'){
       total += arr[i];
     }
   }
@@ -189,11 +189,13 @@ const wordsCount = [
 
 function howManyTimes(arr,wordToCompare) {
   let count = 0;
-  if(arr.length === 0)´
-  return null;
+  if(arr.length === 0){
+
+    return null;
+  }
   
   for(let i = 0; i < arr.length; i++){
-    if(arr.[i] === wordToCompare){
+    if(arr[i] === wordToCompare){
       count++
     }
   }
