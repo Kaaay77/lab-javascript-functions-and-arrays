@@ -1,5 +1,8 @@
-a// Iteration #1: Find the maximum
+// Iteration #1: Find the maximum
 function maxOfTwoNumbers(a, b) {
+  if (a === b){
+    return a
+  }
   if(a > b){
     return a;
   }else if(b > a){
@@ -43,19 +46,18 @@ function sumNumbers(arr) {
 
 // Iteration #3.1 Bonus:
 function sum(arr) {
+  if ( arr.length === 0){
+    return 0;
+  }
   let sum = 0;
-
   for(let i = 0; i < arr.length; i++){
       if(typeof arr[i] === 'Number'){
         sum += arr[i];
-      }else if (typeof arr[i] === 'string'){
+      }else if (typeof arr[i] === 'String'){
         sum += arr[i].length;
       }else if (typeof arr[i] === 'boolean'){
         sum += arr[i];
-      }else{
-      throw new Error("Unsupported data type sir or ma'am");
-    // MIRANDO LAS SOLUCIONES
-  }
+      }
 }
 return sum;
 }
@@ -191,7 +193,7 @@ function howManyTimes(arr,wordToCompare) {
   let count = 0;
   if(arr.length === 0){
 
-    return null;
+    return 0;
   }
   
   for(let i = 0; i < arr.length; i++){
